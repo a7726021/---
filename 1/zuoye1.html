@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-ss.js"></script>
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            /* overflow-x: hidden;
+            overflow-y: hidden; */
+        }
+        
+        .gather {
+            width: 1535px;
+            height: 900px;
+            margin: 0 auto;
+            /* border: 2px solid beige; */
+            overflow: hidden;
+        }
+        
+        #wrap {
+            width: 1045px;
+            height: 700px;
+            float: left;
+            border: 1px solid #ccc;
+        }
+        
+        #nav_left {
+            width: 75px;
+            height: 700px;
+            float: left;
+            background: #26282c;
+            opacity: .7;
+            position: relative;
+        }
+        
+        .iconfont {
+            font-size: 30px;
+            padding: 10px 20px;
+            width: 35px;
+            height: 35px;
+            display: block;
+        }
+        
+        #weiyi {
+            font-size: 30px;
+            padding: 10px 20px;
+            width: 35px;
+            height: 35px;
+            display: block;
+            margin-top: 400px;
+        }
+        
+        .active {
+            color: #0bb208;
+        }
+        
+        #left_sidebar {
+            width: 290px;
+            height: 700px;
+            float: left;
+            background: #e2e2e2;
+        }
+        
+        #peng {
+            float: left;
+            padding: 30px;
+            font-size: 16px;
+        }
+        
+        #z1 {
+            font-size: 15px;
+            width: 15px;
+            height: 15px;
+            color: #26f6ef;
+            float: right;
+            margin-right: 30px;
+            margin-top: -3px;
+        }
+        
+        #peng2 {
+            float: left;
+            color: #ccc;
+            margin-left: 30px;
+            margin-top: -30px;
+        }
+        
+        #peng3>i {
+            width: 50px;
+            height: 50px;
+            font-size: 60px;
+            float: right;
+            margin-top: -80px;
+        }
+        
+        #hr1 {
+            float: left;
+            margin-top: 20px;
+        }
+        
+        #Region {
+            float: left;
+            padding: 30px;
+        }
+        
+        #yin1 {
+            float: right;
+            padding: 10px;
+            margin-top: 47px;
+            margin-right: -20px;
+            color: #ccc;
+        }
+        
+        #yin2 {
+            float: right;
+            padding: 10px;
+            margin-right: -33px;
+            margin-top: 47px;
+            color: #ccc;
+        }
+        
+        #text1 {
+            width: 228px;
+            height: 28px;
+            background: #e0dede;
+            border: 1px solid #e0dede;
+            border-radius: 5px;
+            outline: none;
+            float: left;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        
+        #text4 {
+            width: 228px;
+            height: 28px;
+            background: #e0dede;
+            border: 1px solid #e0dede;
+            border-radius: 5px;
+            outline: none;
+            float: left;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        
+        #b1 {
+            width: 27px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            margin-top: 30px;
+            float: right;
+            background: #e0dede;
+            border: 1px solid #e0dede;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        #bao {
+            width: 290px;
+            height: 65px;
+            float: left;
+        }
+        
+        #xia {
+            /* display: none; */
+            float: left;
+            width: 290px;
+            height: 626px;
+            background: #e2e2e2;
+            margin-top: 10px;
+            overflow: scroll;
+        }
+        
+        .l1 {
+            float: left;
+            width: 290px;
+            height: 60px;
+            color: black;
+            margin-bottom: 30px;
+        }
+        
+        .zong1 {
+            display: none;
+        }
+        
+        .l1>i {
+            width: 25px;
+            height: 30px;
+            background: white;
+            float: left;
+            color: #ccc;
+            margin-left: 15px;
+        }
+        
+        .l2 {
+            float: left;
+            width: 290px;
+            height: 60px;
+            color: black;
+            margin-bottom: 30px;
+        }
+        
+        .l1>img {
+            width: 65px;
+            height: 60px;
+            background: white;
+            float: left;
+            color: #ccc;
+            margin-left: 15px;
+        }
+        
+        .l2>i {
+            width: 25px;
+            height: 30px;
+            background: white;
+            float: left;
+            color: #ccc;
+            margin-left: 15px;
+        }
+        
+        .l2>img {
+            width: 65px;
+            height: 60px;
+            background: white;
+            float: left;
+            color: #ccc;
+            margin-left: 15px;
+        }
+        
+        .span1 {
+            display: block;
+            font-size: 13px;
+            margin-top: 18px;
+            font-weight: bolder;
+        }
+        
+        .span2 {
+            float: right;
+            color: #ccc;
+            margin-top: -78px;
+            font-weight: bolder;
+        }
+        
+        .l1:hover {
+            transition: all 2s;
+            background: #d8d6d6;
+        }
+        
+        #xia2 {
+            /* display: none; */
+            float: left;
+            width: 290px;
+            height: 626px;
+            background: #e2e2e2;
+            margin-top: 10px;
+            overflow: scroll;
+        }
+        
+        .quan {
+            width: 290px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        
+        .p1 {
+            color: #ccc;
+            float: left;
+            margin-left: 20px;
+        }
+        
+        .p2 i {
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            float: left;
+            margin-top: 25px;
+            margin-left: -85px;
+        }
+        
+        .p2>a {
+            margin-top: 43px;
+            margin-left: -15px;
+            float: left;
+            font-style: normal;
+        }
+        
+        .quan1 {
+            width: 290px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        
+        .p3 {
+            color: #ccc;
+            float: left;
+            margin-left: 20px;
+        }
+        
+        .p4 {
+            width: 120px;
+        }
+        
+        .p4 i {
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            float: left;
+            margin-top: 0px;
+            margin-left: 3px;
+        }
+        
+        #xia3 {
+            width: 290px;
+            float: left;
+        }
+        
+        #xia3>li {
+            width: 290px;
+            height: 40px;
+        }
+        
+        #xia3>li>i {
+            line-height: 30px;
+        }
+        
+        #xia3>li>b {
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            margin-top: -52px;
+            margin-left: 68px;
+            float: left;
+        }
+        
+        #xia3>li:hover {
+            background: #ccc;
+        }
+        
+        #left_sidebar>div:nth-of-type(1) {
+            display: block;
+        }
+        
+        .chat {
+            width: 680px;
+            height: 700px;
+            /* background: yellow; */
+            float: right;
+        }
+        
+        .occlude {
+            width: 680px;
+            height: 75px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .unstable {
+            float: right;
+        }
+        
+        .unstable>span {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            display: inline-block;
+        }
+        
+        .round {
+            float: left;
+            width: 680px;
+            height: 54px;
+            /* background: paleturquoise; */
+        }
+        
+        #weiyi2 {
+            float: left;
+            margin-left: 22px;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        
+        .round>span:nth-of-type(2) {
+            float: right;
+        }
+        /* .he {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            transition: all 1s;
+        }
+         */
+        
+        .nav_right {
+            width: 480px;
+            height: 902px;
+            background: rgba(0, 0, 0, .7);
+            float: right;
+            transition: all 1s;
+            /* display: none; */
+            margin-right: -502px;
+            position: relative;
+            z-index: 98;
+        }
+        
+        h1 {
+            font-size: 40px;
+            margin: 10px;
+            color: white;
+            position: absolute;
+            z-index: 99;
+            left: 0;
+        }
+        
+        .content {
+            width: 680px;
+            height: 440px;
+            overflow: auto;
+        }
+        /*  #count {
+            width: 200px;
+            height: 40px;
+            float: right;
+
+            text-align: center;
+            padding: 10px;
+            margin-right: 50px;
+        }*/
+        
+        #foot {
+            width: 680px;
+            height: 185px;
+            /* background: cadetblue; */
+            position: relative;
+        }
+        
+        #ol1 {
+            width: 680px;
+            height: 37px;
+            /* background: pink; */
+            cursor: pointer;
+        }
+        
+        #ol1>li {
+            float: left;
+        }
+        
+        #ol1>li>i {
+            font-size: 14px;
+            width: 17px;
+            height: 17px;
+            float: left;
+        }
+        
+        #ol1>li:nth-of-type(5) {
+            float: right;
+        }
+        
+        #ol1>li:nth-of-type(6) {
+            float: right;
+        }
+        
+        #text2 {
+            width: 678px;
+            height: 25px;
+            float: left;
+            outline: none;
+            border: 0;
+        }
+        
+        #btn {
+            width: 100px;
+            height: 35px;
+            float: right;
+            position: absolute;
+            right: 0px;
+            bottom: 1px;
+        }
+        
+        #countent>li {
+            padding: 10px 0;
+            width: 100%;
+            float: right;
+            position: relative;
+        }
+        
+        .content li u {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            /* float: left; */
+            float: right;
+        }
+        
+        .content li h2 {
+            float: right;
+            /* width: auto; */
+            max-width: 160px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            position: relative;
+            display: inline-block;
+            margin: 0px 8px;
+        }
+        
+        #ssr {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+        
+        #ssr1 {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+        
+        #q1 {
+            width: 600px;
+            height: 100px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -300px;
+            margin-top: -50px;
+            z-index: 30;
+        }
+        
+        #q1>span {
+            float: left;
+            padding: 20px;
+        }
+        
+        #q2 {
+            width: 600px;
+            height: 100px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -300px;
+            margin-top: -50px;
+            z-index: 30;
+        }
+        
+        #q2>span {
+            float: left;
+            padding: 20px;
+        }
+        
+        .btns {
+            color: blue;
+            float: right;
+            outline: 0;
+            border: 0;
+            background: white;
+            font-size: 16px;
+        }
+        
+        .p4 img {
+            width: 40px;
+            height: 40px;
+            /* font-size: 40px; */
+            float: left;
+            margin-top: 43px;
+            margin-left: 22px;
+        }
+        
+        .p4 img:nth-of-type(1) {
+            float: left;
+            margin-left: -9px;
+        }
+        
+        .p4>a {
+            float: right;
+            font-style: normal;
+            margin-top: 50px;
+            margin-right: -23px;
+        }
+        
+        #text3 {
+            width: 228px;
+            height: 28px;
+            background: #e0dede;
+            border: 1px solid #e0dede;
+            border-radius: 5px;
+            outline: none;
+            float: left;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        
+        #mmm {
+            float: left;
+            width: 200px;
+            height: 30px;
+            margin-left: 10px;
+            margin-top: 12px;
+        }
+        
+        #mm1 {
+            float: right;
+        }
+        
+        u>img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        i>img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .content li:before {
+            content: "";
+            width: 0;
+            height: 0;
+            display: inline-block;
+            border: 6px solid transparent;
+            border-bottom-color: #ccc;
+            position: absolute;
+            left: 91.4%;
+            top: 21px;
+            transform: rotate(91deg);
+            display: none;
+        }
+        
+        #countent>span {
+            padding: 10px 0;
+            width: 100%;
+            float: right;
+            position: relative;
+            color: white;
+        }
+        
+        .content span i {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            float: left;
+        }
+        
+        .content span h3 {
+            width: auto;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            position: relative;
+            display: inline-block;
+            background: greenyellow;
+        }
+        
+        .content span:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: inline-block;
+            border: 6px solid transparent;
+            border-bottom-color: greenyellow;
+            position: absolute;
+            left: 5.8%;
+            top: 20px;
+            transform: rotate(270deg);
+        }
+        
+        .k1 {
+            width: 230px;
+            height: 47px;
+            padding-left: 30px;
+            line-height: 47px;
+        }
+        
+        .k1:hover {
+            background: #EBE9E9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class='he'></div>
+        <div class="he1"></div>
+        <div class="gather">
+
+
+            <div id="wrap">
+                <ul id="nav_left">
+                    <li><i class="icon iconfont icon-default-avatar" id="oneself"></i></li>
+                    <li><i class="icon iconfont icon-xiaoxi1"></i></li>
+                    <li><i class="icon iconfont icon-user"></i></li>
+                    <li><i class="icon iconfont icon-gongzuo"></i></li>
+                    <li><i class="icon iconfont icon-fenlei-xuanzhong" id="weiyi"></i></li>
+                </ul>
+                <!-- <ol id="navv_left">
+       
+        </ol> -->
+                <div id="left_sidebar">
+
+                    <!-- <div id="bao"><input type="text" placeholder="搜索" id="text1"> <b id="b1">+</b></div> -->
+                    <div class="zong1">
+                        <div id="bao"><input type="text" placeholder="搜索" id="text1"> <button id="b1">+</button></div>
+                        <div id="xia">
+                            <div class='liao'>
+                                <p class='l1'><img src="img/1.png" alt=""><b id="ssss">百里玄策</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l1'><img src="img/2.png" alt=""><b>花木兰</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l1'><img src="img/3.png" alt=""><b>诸葛亮</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l1'><img src="img/4.png" alt=""><b>杨玉环</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2::20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l1'><img src="img/5.png" alt=""><b>刘禅</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l1'><img src="img/6.png" alt=""><b>钟无艳</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l1'><img src="img/7.png" alt=""><b>鬼谷子</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l1'><img src="img/8.png" alt=""><b>项羽</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l1'><img src="img/9.png" alt=""><b>刘邦</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zong1">
+                        <div id="bao"><input type="text" placeholder="搜索" id="text3"> <button id="b1">+</button></div>
+                        <div id="xia">
+                            <div class='liao'>
+                                <p class='l2'><img src="img/16.png" alt=""><b>蔡文姬</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l2'><img src="img/17.png" alt=""><b>李元芳</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l2'><img src="img/18.png" alt=""><b>鲁班七号</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l2'><img src="img/19.png" alt=""><b>赵云</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l2'><img src="img/20.png" alt=""><b>安琪拉</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l2'><img src="img/21.png" alt=""><b>王昭君</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l2'><img src="img/22.png" alt=""><b>扁鹊</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l2'><img src="img/23.png" alt=""><b>小乔</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                            <div class='liao'>
+                                <p class='l2'><img src="img/24.png" alt=""><b>高渐离</b><span class='span1'><font color='#ccc'>我是我萨克打卡打卡...</font></span></p>
+                                <p class='span2'>下午2:20</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zong1">
+                        <div id="bao"><input type="text" placeholder="搜索" id="text4"> <button id="b1">+</button></div>
+                        <div id='xia2'>
+                            <div class="quan">
+                                <p class="p1">新的朋友</p>
+                                <p class="p2"><i class="icon iconfont icon-fengjing"></i><a>新的朋友</a></p>
+                                <hr width='290px'>
+                            </div>
+                            <div class="quan">
+                                <p class="p1">新的朋友</p>
+                                <p class="p2"><i class="icon iconfont icon-fengjing"></i><a>新的朋友</a></p>
+                                <hr width='290px'>
+                            </div>
+                            <div class="quan1">
+                                <p class="p3">A</p>
+                                <p class="p4">
+                                    <img src="img/10.png" alt=""><a>吕布</a>
+                                    <img src="img/11.png" alt=""><a>哪吒</a>
+                                    <img src="img/12.png" alt=""><a>钟无艳</a>
+                                    <img src="img/13.png" alt=""><a>白起</a>
+                                    <img src="img/14.png" alt=""><a>牛魔</a>
+                                    <img src="img/15.png" alt=""><a>黄忠</a>
+                                </p>
+                                <hr width='290px'>
+                                <p class="p3">B</p>
+                                <p class="p4">
+                                    <img src="img/25.png" alt=""><a>阿珂</a>
+                                    <img src="img/2.png" alt=""><a>花木兰</a>
+                                    <img src="img/3.png" alt=""><a>诸葛亮</a>
+                                    <img src="img/4.png" alt=""><a>杨玉环</a>
+                                    <img src="img/5.png" alt=""><a>刘禅</a>
+                                    <img src="img/6.png" alt=""><a>钟无艳</a>
+                                </p>
+                                <hr width='290px'>
+                                <p class="p3">C</p>
+                                <p class="p4">
+                                    <img src="img/7.png" alt=""><a>鬼谷子</a>
+                                    <img src="img/8.png" alt=""><a>项羽</a>
+                                    <img src="img/9.png" alt=""><a>刘邦</a>
+                                    <img src="img/10.png" alt=""><a>张飞</a>
+                                    <img src="img/11.png" alt=""><a>哪吒</a>
+                                    <img src="img/12.png" alt=""><a>钟无艳</a>
+                                </p>
+                                <hr width='290px'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zong1">
+                        <div id="bao"><input type="text" placeholder="搜索" id="text1"> <button id="b1">+</button></div>
+                        <ul id="xia3">
+                            <li><i class="icon iconfont icon-guangpan"></i><b>全部收藏</b></li>
+                            <li><i class="icon iconfont icon-gengduo-2"></i><b>链接</b></li>
+                            <li><i class="icon iconfont icon-lingsheng"></i><b>相册</b></li>
+                            <li><i class="icon iconfont icon-lanya"></i><b>笔记</b></li>
+                            <li><i class="icon iconfont icon-shipin"></i><b>文件</b></li>
+                            <li><i class="icon iconfont icon-shoucang1"></i><b>音乐</b></li>
+                            <li><i class="icon iconfont icon-sousuo"></i><b>标签</b></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="occlude">
+                        <p class="unstable">
+                            <span>ジ</span>
+                            <span>-</span>
+                            <span>□</span>
+                            <span>x</span>
+                        </p>
+                        <p class="round">
+                            <span id="weiyi2">百里玄策</span>
+                            <span id="mmm">(正在和百里玄策聊天)</span>
+                            <span id="mm1"><i class="icon iconfont icon-gengduo-2" id="shade"></i></span>
+                        </p>
+                    </div>
+                    <div class="content" id="countent">
+                        <li>
+                            <u>
+                            <img src="img/bai.png" alt="">
+                        </u>
+                            <h2>玄策,你哥呢?</h2>
+                        </li>
+                        <span>
+                        <i>
+                            <img src="img/1.png" alt="">
+                        </i>
+                        <h3>不知道哦.</h3>
+                    </span>
+                        <li>
+                            <u>
+                            <img src="img/bai.png" alt="">
+                        </u>
+                            <h2>混蛋小子...我不就你哥么...</h2>
+                        </li>
+                        <span>
+                        <i>
+                            <img src="img/1.png" alt="">
+                        </i>
+                        <h3>那你还问,笨蛋老哥\(0^◇^0)/</h3>
+                    </span>
+                        <span>
+                        <i>
+                            <img src="img/1.png" alt="">
+                        </i>
+                        <h3>老哥,给我零花钱呗~(≧▽≦)/~</h3>
+                    </span>
+                        <li>
+                            <u>
+                            <img src="img/bai.png" alt="">
+                        </u>
+                            <h2>...打你卡上了^(*￣(oo)￣)^(败家老弟)唉╮(╯▽╰)╭</h2>
+                        </li>
+                        <span>
+                        <i>
+                            <img src="img/1.png" alt="">
+                        </i>
+                        <h3>老哥万岁~\(≧▽≦)/~</h3>
+                    </span>
+                    </div>
+                    <div id="foot">
+                        <ol id="ol1">
+                            <li><i class="icon iconfont icon-lanya"></i></li>
+                            <li><i class="icon iconfont icon-shezhi1"></i></li>
+                            <li><i class="icon iconfont icon-shipin"></i></li>
+                            <li><i class="icon iconfont icon-lanya"></i></li>
+                            <li id="heng"><i class="icon iconfont icon-shoucang1"></i></li>
+                            <li><i class="icon iconfont icon-sousuo"></i></li>
+                        </ol>
+                        <input id="text2">
+                        </input>
+                        <button id="btn">发送(Enter)</button>
+                    </div>
+                </div>
+            </div>
+            <div class='nav_right'>
+                <h1 class="h11">网易音乐</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        var text = "";
+        //实时筛选，不用点击按钮
+        setInterval(function() {
+            text = $('#text1').val(); //获取文本框输入
+            if ($.trim(text) != "") {
+                $(".l1").hide().filter(":contains('" + text + "')").show()
+            } else {
+                $('.l1').show(); //当删除文本框的内容时，又重新显示表格所有内容
+            }
+        }, 100);
+        var text3 = "";
+        setInterval(function() {
+            text = $('#text3').val();
+            if ($.trim(text) != "") {
+                $(".l2").hide().filter(":contains('" + text + "')").show()
+            } else {
+                $('.l2').show();
+            }
+        }, 100);
+        var text4 = "";
+        setInterval(function() {
+            text = $('#text4').val();
+            if ($.trim(text) != "") {
+                $(".p4>a").hide().filter(":contains('" + text + "')").show()
+            } else {
+                $(".p4>a").show()
+            }
+        }, 100);
+
+        function Override() {
+            this.Myself()
+            this.Feedback()
+            this.shade()
+            this.bianhua()
+            this.cou()
+            this.text2 = document.getElementById("text2")
+            this.countent = document.getElementById("countent")
+            this.count = document.getElementById("count")
+            this.list = document.getElementById("ssss").innerHTML
+            this.mmm = document.getElementById("mmm")
+            this.weiyi2 = document.getElementById("weiyi2")
+            this.fang5()
+            this.jj()
+        }
+        Override.prototype = {
+            constructor: Override,
+            Myself: function() {
+                var _this = this;
+                var num = 0
+                $("#nav_left>li").eq(0).css("color", "#0bb208")
+                $("#nav_left").on("click", "li", function() {
+                    $("#nav_left>li").css("color", "black")
+                    $(this).eq(num).css("color", "#0bb208")
+                    var index = $(this).index();
+                    $("#left_sidebar>.zong1").eq(index).show().siblings().hide()
+                    $(".Myself").hide()
+                    $(".ss").hide()
+                })
+                $("#nav_left>li").removeClass("active")
+                $("#oneself").on("mouseover", function() {
+                    $(`<div class='Myself'><p id='peng'>彭于晏、plus<i class="icon iconfont icon-icongerenzhongxin-01" id='z1'>
+                    </i></p><p id='peng2'>微信号:jsk8787682</p><p id='peng3'><i class="icon iconfont icon-default-avatar" id="oneself">
+                    </i></p><hr width='310px' id='hr1'><p id='Region'><font color='#ccc'>地区</font>&nbsp;&nbsp;&nbsp;江西九江</p><span id='yin1'><i class="icon iconfont icon-xinlangweibo11">
+                    </i></span><span id='yin2'><i class="icon iconfont icon-angle-double-left"></i></span></div>`).css({
+                        position: "absolute",
+                        width: "310",
+                        height: "240",
+                        left: "60px",
+                        top: "20px",
+                        background: "white",
+                        zIndex: "99",
+                        boxShadow: "5px 5px 5px white"
+                    }).appendTo("#nav_left")
+                    $("#nav_left>li:nth-of-type(5)").css("color", "black")
+                    $("#nav_left>li:nth-of-type(1)").css("color", "#0bb208").siblings().css("color", "black")
+                })
+                $("#oneself").on("mouseout", function() {
+                    $(".Myself").hide()
+                    $(".ss").hide()
+                })
+            },
+            Feedback: function() {
+                var _this = this
+                $("#weiyi").on("mouseover", function() {
+                    $("#nav_left>li:nth-of-type(5)").css("color", "#0bb208")
+                    $(`<div class='ss'><p>意见反馈</p><p>备份与恢复</p><p>设置</p></div>`).css({
+                        width: 130,
+                        height: 140,
+                        background: "rgba(0,0,0,.5)",
+                        color: "white",
+                        textAlign: "center",
+                        position: "absolute",
+                        lineHeight: "46px",
+                        left: "75px",
+                        bottom: "40px",
+                    }).appendTo("#nav_left")
+                    $("#nav_left>li:nth-of-type(1)").css("color", "black")
+                })
+                $("#weiyi").on("mouseout", function() {
+                    $(".ss").hide()
+                    $("#nav_left>li:nth-of-type(5)").css("color", "black")
+                })
+            },
+            shade: function() {
+                var _this = this;
+                $("#shade").on("click", function() {
+                    $(".he").css({
+                        width: "100%",
+                        height: "100%",
+                        position: "fixed",
+                        transition: "all 1s",
+                        zIndex: "21",
+                        background: "rgba(0, 0, 0, .3)"
+                    })
+                    $(".nav_right").animate({
+                        marginRight: 0 + "px"
+                    }, 500)
+                    $(".he").on("dblclick", function() {
+                        $(".he").css({
+                            width: "100%",
+                            height: "100%",
+                            position: "",
+                            transition: "all 3s",
+                            background: ""
+                        })
+                        $(".nav_right").animate({
+                            marginRight: -502 + "px"
+                        }, 500)
+                    })
+                })
+            },
+            bianhua: function() {
+                var _this = this;
+                $(".p4").on("click", "a", function() {
+                    $("#weiyi2").text($(this).text())
+                    $("#mmm").text("(" + "正在和" + $(this).text() + "聊天" + ")")
+                    $("#countent").text("")
+                })
+                $(".l1").on("click", "b", function() {
+                    $("#weiyi2").text($(this).text())
+                    $("#mmm").text("(" + "正在和" + $(this).text() + "聊天" + ")")
+                    $("#countent").text("")
+                })
+                $(".l2").on("click", "b", function() {
+                    $("#weiyi2").text($(this).text())
+                    $("#mmm").text("(" + "正在和" + $(this).text() + "聊天" + ")")
+                    $("#countent").text("")
+                })
+            },
+            cou: function() {
+                var _this = this;
+                $("#btn").on("click", function() {
+                    if (_this.text2.value != "") {
+                        var p2 = document.createElement("u")
+                        p2.innerHTML = `<img src="img/bai.png" id="ssr">`
+                        var p1 = document.createElement("h2")
+                        p1.innerHTML = text2.value
+
+                        var li = document.createElement("li")
+                            // var p = document.createElement("p")
+                        li.appendChild(p2)
+                        li.appendChild(p1)
+                        countent.appendChild(li)
+                        text2.value = "";
+                        _this.jj()
+                    } else {
+                        $("#text2").val("")
+                        $(".he").css({
+                            width: "100%",
+                            height: "100%",
+                            position: "fixed",
+                            transition: "all 1s",
+                            zIndex: "11",
+                            background: "rgba(0, 0, 0, .3)"
+                        })
+                        $(`<div id='q1'><span>不能发送空消息</span><hr width='600px'><button class='btns'>关闭</button></div>`).appendTo(document.body)
+                    }
+                    countent.scrollTop = countent.scrollHeight;
+                    $(".btns").on("click", function() {
+                        $("#q1").remove()
+                        $(".he").css({
+                            width: "100%",
+                            height: "100%",
+                            position: "",
+                            transition: "all 13s",
+                            background: ""
+                        })
+                    })
+                })
+            },
+            fang5: function() {
+                var _this = this;
+                $(document).on("keydown", function(e) {
+                    if (e.key == "Enter") {
+                        if (_this.text2.value != "") {
+                            var p2 = document.createElement("u")
+                            p2.innerHTML = `<img src="img/bai.png" id="ssr1">`
+                            var p1 = document.createElement("h2")
+                            p1.innerHTML = text2.value
+                            var li = document.createElement("li")
+                            li.appendChild(p2)
+                            li.appendChild(p1)
+                            countent.appendChild(li)
+                            text2.value = "";
+                            _this.jj()
+                        } else {
+                            $("#text2").val("")
+                            $(".he1").css({
+                                width: "100%",
+                                height: "100%",
+                                position: "fixed",
+                                transition: "all 1s",
+                                zIndex: "11",
+                                background: "rgba(0, 0, 0, .3)"
+                            })
+                            $(`<div id='q1'><span>不能发送空消息</span><hr width='600px'><button class='btns'>关闭</button></div>`).appendTo(document.body)
+                        }
+                        countent.scrollTop = countent.scrollHeight;
+                        $(".btns").on("click", function() {
+                            $("#q1").remove()
+                            $(".he1").css({
+                                width: "100%",
+                                height: "100%",
+                                position: "",
+                                transition: "all 13s",
+                                background: ""
+                            })
+                        })
+                    }
+                })
+            },
+            jj: function() {
+                var _this = this;
+                var num1 = -1;
+                $(".content li h2").on("contextmenu", function() {
+                        $(".layer").remove()
+                        $(document).on('contextmenu', function(e) {　　　　
+                            e.preventDefault();　　
+                        });
+                        $(`<div class='layer'><li class='k1'>返回</li><li class='k1'>前进</li><li class='k1'>重新加载</li><li class='k1'>另存为</li><li class='k1'>打印</li><li class='k1' id='k1'>撤销</li></div>`).css({
+                            position: "absolute",
+                            width: "260px",
+                            height: "300px",
+                            background: "white",
+                            border: "1px solid #ccc",
+                            boxShadow: "5px 4px 4px #ccc",
+                            zIndex: "99",
+                            left: $(this).offset().left + $(this).width(),
+                            top: $(this).offset().top,
+                        }).appendTo(".content")
+                        $("#k1").on("click", function() {
+                            $(this).parents(".layer").remove()
+                            num1++
+                            $(".content").find("li").eq(num1).html("您已撤回一条消息")
+                            $("#countent>li").css({
+                                textAlign: "center"
+                            });
+                        })
+                        $(document).scroll(function() {
+                            $(".layer").remove()
+                        })
+                        $(".content").scroll(function() {
+                            $(".layer").remove()
+                        })
+
+                    })
+                    // function Youji() {
+                    //     return false;
+                    // }
+            }
+        }
+        var obj = new Override
+    </script>
+</body>
+
+</html>

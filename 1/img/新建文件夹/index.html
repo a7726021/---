@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/大包.js"></script>
+    <script src="js/jquery.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        
+        #wrap {
+            width: 1200px;
+            height: 500px;
+            background: url("images/2013-12-02.jpg");
+            background-size: auto;
+            position: relative;
+            overflow: hidden;
+            margin: 150px auto;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        #lun {
+            width: 820px;
+            height: 360px;
+            float: left;
+            margin-top: 60px;
+            margin-left: 50px;
+            position: relative;
+        }
+        
+        #lun ul {
+            width: 820px;
+            height: 360px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        #lun li {
+            float: left;
+            margin: 35px;
+        }
+        
+        .app {
+            width: 78px;
+            height: 85px;
+            color: #fff;
+        }
+        
+        .app dd {
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        
+        .app dt {
+            margin-left: 6px;
+        }
+        
+        .app img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        
+        .bpp {
+            width: 78px;
+            height: 85px;
+        }
+        
+        .bpp dd {
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        
+        .bpp dt {
+            margin-left: 6px;
+        }
+        
+        .bpp img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        
+        #left {
+            width: 300px;
+            height: 100%;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            right: -300px;
+        }
+        
+        #left h2 {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            background: #2ecc71;
+            color: #fff;
+        }
+        
+        #left p {
+            width: 300px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background: #ccc
+            /*color: #fff;*/
+        }
+        
+        #tab {
+            width: 100px;
+            height: 418px;
+            float: left;
+            border-right: 1px solid #ccc;
+        }
+        
+        #tab li {
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        #tab1 {
+            position: relative;
+            width: 197px;
+            height: 418px;
+            float: left;
+        }
+        
+        #tab1 li {
+            float: left;
+            margin: 9px;
+        }
+        
+        #ye1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .active {
+            background: #ccc;
+        }
+        
+        #jia {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: #ccc;
+            border-radius: 50%;
+            font-size: 30px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        #dian {
+            width: 130px;
+            height: 50px;
+            position: absolute;
+            bottom: 85px;
+            left: 360px;
+        }
+        
+        #dian li {
+            float: left;
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 0, 0, .7);
+            border-radius: 50%;
+        }
+        
+        .gaoliang {
+            opacity: 0.5;
+        }
+        
+        .cha {
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            line-height: 15px;
+            background: #f00;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="lun">
+            <ul class="lunbo">
+                <li class="app">
+                    <dd><img src="images/1.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/2.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/3.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                </li>
+                <li class="app">
+                    <dd><img src="images/4.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/6.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+            </ul>
+            <ul class="lunbo">
+                <li class="app">
+                    <dd><img src="images/3.jpg" alt=""></dd>
+                    <dt>待办事项</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/5.jpg" alt=""></dd>
+                    <dt>待办事项</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/6.jpg" alt=""></dd>
+                    <dt>待办事项</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/1.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/6.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/1.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/3.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+            </ul>
+            <ul class="lunbo">
+                <li class="app">
+                    <dd><img src="images/2.jpg" alt=""></dd>
+                    <dt>笔记</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/1.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/5.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/1.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/1.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/1.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/5.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+                <li class="app">
+                    <dd><img src="images/7.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                    <span class="cha">×</span>
+                </li>
+            </ul>
+            <ul class="lunbo">
+                <!-- <li class="app">
+                    <dd><img src="images/2.jpg" alt=""></dd>
+                    <dt>笔记</dt>
+                </li>
+                <li class="app">
+                    <dd><img src="images/1.jpg" alt=""></dd>
+                    <dt>天猫精选</dt>
+                </li>-->
+            </ul>
+
+        </div>
+        <div id="dian">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
+        <div id="left">
+            <h2>Infinity<b id="guan" style="float: right">×</b></h2>
+            <p>+自定义添加</p>
+            <ul id="tab">
+                <li>受欢迎的</li>
+                <li>游戏和娱乐</li>
+                <li>购物</li>
+                <li>应用</li>
+                <li>音乐和视频</li>
+                <li>图片</li>
+                <li>新闻</li>
+                <li>社交博客</li>
+                <li>生活方式</li>
+                <li>图片</li>
+            </ul>
+            <ol id="tab1">
+                <div id="ye1">
+                    <li class="bpp">
+                        <dd><img src="images/1.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/2.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/3.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/4.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/5.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                </div>
+                <div id="ye1">
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                </div>
+                <div id="ye1">
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/5.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                </div>
+                <div id="ye1">
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/7.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                </div>
+                <div id="ye1">
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/5.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                    <li class="bpp">
+                        <dd><img src="images/6.jpg" alt=""></dd>
+                        <dt>天猫精选</dt>
+                    </li>
+                </div>
+            </ol>
+        </div>
+        <div id="jia">+</div>
+    </div>
+    <script>
+        google()
+    </script>
+</body>
+
+</html>

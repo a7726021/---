@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <script src="jquery-ss.js"></script>
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            cursor: pointer;
+        }
+        
+        .bao {
+            width: 580px;
+            height: 380px;
+            border: 1px solid #ccc;
+            box-shadow: 10px 10px 10px #ccc;
+        }
+        
+        #img0 {
+            width: 500px;
+            height: 300px;
+            margin-left: 40px;
+            margin-top: 40px;
+            position: relative;
+        }
+        
+        #zhe {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, .5);
+            z-index: 9;
+            display: none;
+        }
+        
+        .yi {
+            width: 1600px;
+            height: 1000px;
+            float: left;
+            z-Index: 10;
+            overflow: hidden;
+        }
+        
+        .ul1 {
+            width: 1600px;
+            height: 1000px;
+        }
+        
+        .ul1>li {
+            position: absolute;
+            top: 155px;
+            left: 200px;
+            display: none;
+        }
+        
+        .yi>ul>li>img {
+            width: 1600px;
+            height: 965px;
+            margin-top: 60px;
+            box-shadow: 15px 15px 15px #ccc;
+        }
+        
+        #wrap {
+            position: relative;
+            width: 2530px;
+            height: 1300px;
+            border: 5px solid #ccc;
+            background: #fff;
+            margin: 0 auto;
+            overflow: hidden;
+            display: none;
+            z-index: 89;
+        }
+        
+        #you1 {
+            float: right;
+            width: 450px;
+            height: 930px;
+            margin-top: 13px;
+            margin-right: 25px;
+            border: 5px solid #ccc;
+            box-shadow: 15px 15px 15px #ccc;
+            position: relative;
+        }
+        
+        .spans {
+            width: 160px;
+            height: 160px;
+            margin: 40px 0px 7px 33px;
+            display: inline-block;
+            transition: all 1s;
+        }
+        
+        #you1 span img {
+            width: 160px;
+            height: 160px;
+        }
+        
+        #h2 {
+            float: left;
+            font-size: 55px;
+            margin-left: 460px;
+            margin-top: 90px;
+        }
+        
+        #you2 {
+            float: right;
+            width: 450px;
+            height: 930px;
+            margin-top: 13px;
+            margin-right: 25px;
+            border: 5px solid #ccc;
+            display: none;
+        }
+        
+        #you2 span img {
+            width: 160px;
+            height: 160px;
+        }
+        
+        #you3 {
+            float: right;
+            width: 450px;
+            height: 930px;
+            margin-top: 13px;
+            margin-right: 25px;
+            border: 5px solid #ccc;
+            display: none;
+        }
+        
+        #you3 span img {
+            width: 160px;
+            height: 160px;
+        }
+        
+        #zuo {
+            width: 180px;
+            height: 210px;
+            line-height: 210px;
+            text-align: center;
+            position: absolute;
+            color: #ccc;
+            font-weight: bolder;
+            font-size: 150px;
+            left: 0;
+            top: 50%;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+            background: rgba(0, 0, 0, .5);
+        }
+        
+        #you {
+            width: 180px;
+            height: 210px;
+            line-height: 210px;
+            text-align: center;
+            color: #ccc;
+            position: absolute;
+            font-weight: bolder;
+            font-size: 150px;
+            top: 50%;
+            right: 21.2%;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+            background: rgba(0, 0, 0, .5);
+        }
+        
+        #jian {
+            position: absolute;
+            right: 11%;
+            bottom: 132px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bolder;
+            background: #ccc;
+            color: white;
+            font-size: 20px;
+            box-shadow: 10px 10px 10px #ccc;
+        }
+        
+        #kuo {
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background: #ccc;
+            display: inline-block;
+            text-align: center;
+            position: absolute;
+            right: 9%;
+            bottom: 132px;
+            color: white;
+            font-size: 20px;
+            box-shadow: 10px 10px 10px #ccc;
+        }
+        
+        #ji {
+            font-style: normal;
+            font-weight: bolder;
+        }
+        
+        #jia {
+            position: absolute;
+            right: 7%;
+            bottom: 132px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bolder;
+            background: #ccc;
+            color: white;
+            font-size: 20px;
+            box-shadow: 10px 10px 10px #ccc;
+        }
+        
+        #btns>a {
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            background: #ccc;
+            display: inline-block;
+            margin-top: 110px;
+            margin-left: 12px;
+            box-shadow: 10px 10px 10px #ccc;
+        }
+        
+        #btns>a:nth-of-type(1) {
+            color: red;
+        }
+        
+        #chang {
+            width: 2530px;
+            height: 70px;
+            background: #ccc;
+            line-height: 70px;
+        }
+        
+        #chang>span:nth-of-type(1) {
+            float: left;
+            font-size: 35px;
+            margin-left: 30px;
+        }
+        
+        #chang>span:nth-of-type(2) {
+            float: right;
+            font-size: 75px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="zhe"></div>
+    <div class="bao"><img src="img/dao1.jpg" alt="" id="img0"></div>
+    <div id="wrap">
+        <div id="chang"><span>查看大图</span><span>×</span></div>
+        <div class='yi'>
+            <ul class="ul1">
+                <li><img src="img/dao1.jpg"></li>
+                <li><img src="img/2.jpg"></li>
+                <li><img src="img/dao2.jpg"></li>
+                <li><img src="img/4.jpg"></li>
+                <li><img src="img/dao3.jpg"></li>
+                <li><img src="img/dao6.jpg"></li>
+                <li><img src="img/dao5.jpg"></li>
+                <li><img src="img/dao4.jpg"></li>
+                <li><img src="img/dao.png"></li>
+                <li><img src="img/ying1.jpg"></li>
+                <li><img src="img/huo1.jpg"></li>
+                <li><img src="img/huo2.jpg"></li>
+                <li><img src="img/huo3.jpg"></li>
+                <li><img src="img/huo4.jpg"></li>
+                <li><img src="img/15.jpg"></li>
+                <li><img src="img/16.jpg"></li>
+                <li><img src="img/17.jpg"></li>
+                <li><img src="img/18.jpg"></li>
+                <li><img src="img/19.jpg"></li>
+                <li><img src="img/dao.7.jpg"></li>
+                <li><img src="img/dao7.jpg"></li>
+                <li><img src="img/22.jpg"></li>
+                <li><img src="img/23.jpg"></li>
+                <li><img src="img/24.jpg"></li>
+            </ul>
+
+        </div>
+        <h2 id="h2">图片信息</h2>
+        <div id="you1">
+            <span class="spans"><img src="img/dao1.jpg"></span>
+            <span class="spans"><img src="img/2.jpg"></span>
+            <span class="spans"><img src="img/dao2.jpg"></span>
+            <span class="spans"><img src="img/4.jpg"></span>
+            <span class="spans"><img src="img/dao3.jpg"></span>
+            <span class="spans"><img src="img/dao6.jpg"></span>
+            <span class="spans"><img src="img/dao5.jpg"></span>
+            <span class="spans"><img src="img/dao4.jpg"></span>
+        </div>
+        <div id="you2">
+            <span class="spans"><img src="img/dao.png"></span>
+            <span class="spans"><img src="img/ying1.jpg"></span>
+            <span class="spans"><img src="img/huo1.jpg"></span>
+            <span class="spans"><img src="img/huo2.jpg"></span>
+            <span class="spans"><img src="img/huo3.jpg"></span>
+            <span class="spans"><img src="img/huo4.jpg"></span>
+            <span class="spans"><img src="img/15.jpg"></span>
+            <span class="spans"><img src="img/16.jpg"></span>
+        </div>
+        <div id="you3">
+            <span class="spans"><img src="img/17.jpg"></span>
+            <span class="spans"><img src="img/18.jpg"></span>
+            <span class="spans"><img src="img/19.jpg"></span>
+            <span class="spans"><img src="img/dao.7.jpg"></span>
+            <span class="spans"><img src="img/dao7.jpg"></span>
+            <span class="spans"><img src="img/22.jpg"></span>
+            <span class="spans"><img src="img/23.jpg"></span>
+            <span class="spans"><img src="img/24.jpg"></span>
+        </div>
+        <div id="zuo">
+
+            <</div>
+                <div id="you">></div>
+                <span id="jian">◀</span>
+                <div id="kuo"><b id="b1">1</b><i id="ji">/3</i></div><span id="jia">▶</span>
+                <div id="btns">
+                    <a href="javascript:;" id="a1">1</a>
+                    <a href="javascript:;" id="a2">2</a>
+                    <a href="javascript:;" id="a3">3</a>
+                </div>
+        </div>
+
+        <script>
+            function Sss() {
+                this.click()
+                this.num = 0;
+                this.click2()
+                this.you()
+                this.qie()
+                this.zuo()
+                this.jian()
+                this.jia()
+                this.aaa()
+            }
+            Sss.prototype = {
+                constructor: Sss,
+                click: function() {
+                    var _this = this;
+                    $("#img0").on("click", function() {
+                        $("#wrap").show()
+                        $("#zhe").show()
+                        $(".yi").show()
+
+                    })
+                    $("#zhe").on("dblclick", function() {
+                        $("#wrap").hide()
+                        $("#zhe").hide()
+                        $(".yi").hide()
+                    })
+
+                },
+                click2: function() {
+                    var _this = this;
+                    // var num = 0;
+                    $(".ul1>li").eq(0).show()
+
+                    $(".spans").css({
+                        "opacity": ".5",
+                        border: "6px solid transparent"
+                    })
+                    $(".spans").eq(0).css({
+                        "opacity": "1",
+                        border: "6px solid red"
+                    })
+                    $(".spans").each(function(index, item) {
+                        $(this).click(function() {
+                            _this.num = index;
+                            $(".spans").css({
+                                "opacity": ".5",
+                                border: "6px solid transparent"
+                            })
+                            $(".spans").eq(_this.num).css({
+                                "opacity": "1",
+                                border: "6px solid red"
+                            })
+                            $(".ul1 li").eq(index).fadeIn(1000).siblings().fadeOut(1000);
+                        })
+                    })
+
+
+                },
+                aaa: function() {
+                    var _this = this;
+                    $("#btns").on("click", "a", function() {
+                        $(this).css("color", "red").siblings().css("color", "white")
+                        switch ($(this).attr("id")) {
+                            case "a1":
+                                _this.num = 0;
+                                if (_this.num <= 7) {
+                                    $("#you1").css("display", "block")
+                                    $("#you2").css("display", "none")
+                                    $("#you3").css("display", "none")
+                                    $("#b1").text("1")
+                                }
+                                $(".spans").css({
+                                    opacity: ".5",
+                                    border: "6px solid transparent"
+                                })
+                                $(".spans").eq(_this.num).css({
+                                    opacity: "1",
+                                    border: "6px solid red"
+                                })
+                                $(".ul1 li").eq(_this.num).fadeIn(1000).siblings().fadeOut(1000)
+                                break;
+                            case "a2":
+                                _this.num = 8;
+                                if (_this.num >= 8) {
+                                    $("#you1").css("display", "none")
+                                    $("#you2").css("display", "block")
+                                    $("#you3").css("display", "none")
+                                    $("b").text("2")
+
+                                }
+                                $(".spans").css({
+                                    opacity: ".5",
+                                    border: "6px solid transparent"
+                                })
+                                $(".spans").eq(_this.num).css({
+                                    opacity: "1",
+                                    border: "6px solid red"
+                                })
+                                $(".ul1 li").eq(_this.num).fadeIn(1000).siblings().fadeOut(1000)
+                                break;
+                            case "a3":
+                                _this.num = 16;
+                                if (_this.num >= 16) {
+                                    $("#you1").css("display", "none")
+                                    $("#you2").css("display", "none")
+                                    $("#you3").css("display", "block")
+                                    $("#b1").text("3")
+                                }
+                                $(".spans").css({
+                                    opacity: ".5",
+                                    border: "6px solid transparent"
+                                })
+                                $(".spans").eq(_this.num).css({
+                                    opacity: "1",
+                                    border: "6px solid red"
+                                })
+                                $(".ul1 li").eq(_this.num).fadeIn(1000).siblings().fadeOut(1000)
+                                break;
+                        }
+                    })
+                },
+                jian: function() {
+                    var _this = this;
+                    $("#jian").click(function() {
+                        if ($("#b1").text() == "3") {
+                            $("#b1").text("2")
+                            _this.num = 8
+                            $("#btns>a:nth-of-type(2)").css("color", "red").siblings().css("color", "white")
+                            if (_this.num >= 8) {
+                                $("#you1").css("display", "none")
+                                $("#you2").css("display", "block")
+                                $("#you3").css("display", "none")
+                                $("b").text("2")
+                            }
+                            $(".spans").css({
+                                "opacity": ".5",
+                                border: "6px solid transparent"
+                            })
+                            $(".spans").eq(_this.num).css({
+                                "opacity": "1",
+                                border: "6px solid red"
+                            })
+                            $(".ul1 li").eq(_this.num).fadeIn(1000).siblings().fadeOut(1000);
+                        } else if ($("#b1").text() == 2) {
+                            $("#b1").text("1")
+                            _this.num = 0
+                            $("#btns>a:nth-of-type(1)").css("color", "red").siblings().css("color", "white")
+                            if (_this.num <= 7) {
+                                $("#you1").css("display", "block")
+                                $("#you2").css("display", "none")
+                                $("#you3").css("display", "none")
+                                $("b").text("1")
+                            }
+                            $(".spans").css({
+                                "opacity": ".5",
+                                border: "6px solid transparent"
+                            })
+                            $(".spans").eq(_this.num).css({
+                                "opacity": "1",
+                                border: "6px solid red"
+                            })
+                            $(".ul1 li").eq(_this.num).fadeIn(1000).siblings().fadeOut(1000);
+                        }
+                        if ($("#b1").text() == "1") {
+                            $("#b1").text("1")
+                        }
+                    })
+                },
+                jia: function() {
+                    var _this = this;
+                    $("#jia").click(function() {
+                        if ($("#b1").text() == "1") {
+                            $("#b1").text("2")
+                            _this.num = 8
+                            $("#btns>a:nth-of-type(2)").css("color", "red").siblings().css("color", "white")
+                            if (_this.num >= 8) {
+                                $("#you1").css("display", "none")
+                                $("#you2").css({
+                                    "display": "block",
+                                })
+                                $("#you3").css("display", "none")
+                                $("b").text("2")
+
+                            }
+                            $(".spans").css({
+                                "opacity": ".5",
+                                border: "6px solid transparent"
+                            })
+                            $(".spans").eq(_this.num).css({
+                                "opacity": "1",
+                                border: "6px solid red"
+                            })
+                            $(".ul1 li").eq(_this.num).fadeIn(1000).siblings().fadeOut(1000);
+                        } else
+                        if ($("#b1").text() == "2") {
+                            $("#b1").text("3")
+                            _this.num = 16
+                            $("#btns>a:nth-of-type(3)").css("color", "red").siblings().css("color", "white")
+                            if (_this.num >= 16) {
+                                $("#you1").css("display", "none")
+                                $("#you3").css("display", "block")
+                                $("#you2").css("display", "none")
+                                $("b").text("3")
+                            }
+                            $(".spans").css({
+                                "opacity": ".5",
+                                border: "6px solid transparent"
+                            })
+                            $(".spans").eq(_this.num).css({
+                                "opacity": "1",
+                                border: "6px solid red"
+                            })
+                            $(".ul1 li").eq(_this.num).fadeIn(1000).siblings().fadeOut(1000);
+                        }
+                        if ($("#b1").text() == "3") {
+                            $("#b1").text("3")
+                        }
+                    })
+                },
+                you: function() {
+                    var _this = this;
+                    $("#you").on("click", function() {
+                        if (_this.num >= 7) {
+                            $("#you2").css({
+                                display: "block"
+                            })
+                            $("b").text("2")
+                            $("#you1").css({
+                                display: "none"
+                            })
+                            $("#btns>a:nth-of-type(2)").css("color", "red").siblings().css("color", "white")
+                        }
+                        if (_this.num >= 15) {
+                            $("#you3").css({
+                                display: "block"
+                            })
+                            $("b").text("3")
+                            $("#btns>a:nth-of-type(3)").css("color", "red").siblings().css("color", "white")
+                            $("#you2").css({
+                                display: "none"
+                            })
+                            $("#you1").css({
+                                display: "none"
+                            })
+                        }
+                        if (_this.num >= 23) {
+                            $("#you3").css({
+                                display: "none"
+
+                            })
+                            $("#you2").css({
+                                display: "none"
+
+                            })
+                            $("#you1").css({
+                                display: "block"
+                            })
+                            $("b").text("1")
+                            $("#btns>a:nth-of-type(1)").css("color", "red").siblings().css("color", "white")
+                        }
+                        if (_this.num <= 24) {
+                            _this.num++
+                        }
+                        if (_this.num > 23) {
+                            _this.num = 0;
+                        }
+                        if (_this.num == 24) {
+                            $(".spans").eq(23).css({
+                                "opacity": "1",
+                                border: "6px solid red"
+                            })
+                        } else {
+                            $(".spans").css("opacity", ".5")
+                            $(".spans").css({
+                                "opacity": ".5",
+                                border: "6px solid transparent"
+                            })
+                            $(".spans").eq(_this.num).css({
+                                "opacity": "1",
+                                border: "6px solid red"
+                            })
+                        }
+                        $(".ul1 li").eq(_this.num).fadeIn(1000).siblings().fadeOut(1000);
+                    })
+
+                },
+                zuo: function() {
+                    var _this = this;
+                    $("#zuo").on("click", function() {
+                        if (_this.num >= 0) {
+                            _this.num--;
+                            if (_this.num < 24 || _this.num >= 17) {
+                                $("#you2").css({
+                                    display: "none"
+                                })
+                                $("#you1").css({
+                                    display: "none"
+                                })
+                                $("#you3").css({
+                                    display: "block"
+
+                                })
+                                $("b").text("3")
+                                $("#btns>a:nth-of-type(3)").css("color", "red").siblings().css("color", "white")
+                            }
+                        }
+                        if (_this.num < 0) {
+                            _this.num = 23;
+                        }
+                        if (_this.num < 16) {
+                            $("#you2").css({
+                                display: "block"
+                            })
+                            $("#you3").css({
+                                display: "none"
+
+                            })
+                            $("#you1").css({
+                                display: "none"
+                            })
+                            $("b").text("2")
+                            $("#btns>a:nth-of-type(2)").css("color", "red").siblings().css("color", "white")
+                        }
+
+                        if (_this.num < 8) {
+                            $("#you1").css({
+                                display: "block"
+                            })
+                            $("#you3").css({
+                                display: "none"
+
+                            })
+                            $("#you2").css({
+                                display: "none"
+                            })
+                            $("b").text("1")
+                            $("#btns>a:nth-of-type(1)").css("color", "red").siblings().css("color", "white")
+                        }
+                        if (_this.num == 24) {
+                            $(".spans").eq(23).css({
+                                "opacity": "1",
+                                border: "6px solid red"
+                            })
+                        } else {
+                            $(".spans").css({
+                                "opacity": ".5",
+                                border: "6px solid transparent"
+                            })
+                            $(".spans").eq(_this.num).css({
+                                "opacity": "1",
+                                border: "6px solid red"
+                            })
+                        }
+                        $(".ul1 li").eq(_this.num).fadeIn(1000).siblings().fadeOut(1000);
+                    })
+                },
+                qie: function() {
+
+                }
+
+            }
+            var obj = new Sss()
+        </script>
+
+</body>
+
+</html>
